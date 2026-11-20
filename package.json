@@ -1,0 +1,36 @@
+{
+  "name": "pocketoo",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/mobile",
+    "packages/domain",
+    "functions"
+  ],
+  "engines": {
+    "node": ">=24.12.0"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "typecheck": "npm run typecheck --workspaces && tsc --noEmit -p tests",
+    "test": "jest --ci",
+    "test:rules": "firebase emulators:exec --only firestore --project demo-pocketoo \"jest --ci --config tests/rules/jest.config.js\""
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "6.0.0",
+    "@types/jest": "30.0.0",
+    "eslint": "10.15.0",
+    "eslint-import-resolver-typescript": "4.4.5",
+    "eslint-plugin-boundaries": "7.4.4",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "firebase": "13.1.0",
+    "firebase-tools": "15.36.0",
+    "jest": "30.5.2",
+    "prettier": "3.10.1",
+    "ts-jest": "29.4.15",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "8.73.0"
+  }
+}

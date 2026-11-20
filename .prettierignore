@@ -1,0 +1,11 @@
+.claude/
+.agents/
+docs/
+scripts/
+*.md
+.mcp.json
+package-lock.json
+.github/*
+!.github/workflows/
+.github/workflows/*
+!.github/workflows/ci.yml

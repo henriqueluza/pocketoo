@@ -1,4 +1,67 @@
-# project-template — AI Software House
+# Pocketoo
+
+App Android de finanças para uma microempresa de eventos: controla o dinheiro pessoal (CPF) e o da empresa (CNPJ) em um só lugar, com limites, planejamento e registro rápido de gastos. Produto em `docs/product/pocketoo/PRD.md`; decisões de stack em `docs/architecture/pocketoo/ADR-0001-stack.md`. Esta é a base do monorepo; as funcionalidades chegam nas Issues seguintes.
+
+## Estrutura
+
+| Caminho | O que é |
+|---|---|
+| `apps/mobile` | App `@pocketoo/mobile`: Expo SDK 58 + Expo Router. `app/` contém só rotas; o código fica em `src/` |
+| `packages/domain` | `@pocketoo/domain`: TypeScript puro (regras de dinheiro), consumido como fonte pelos outros workspaces |
+| `functions` | `@pocketoo/functions`: Cloud Functions for Firebase 2ª geração, região `southamerica-east1` |
+| `firestore.rules` | Regras do Firestore; por ora negam todo acesso |
+| `tests/rules` | Testes das Rules no Emulator do Firestore |
+
+Testes unitários ficam em `__tests__/*.test.ts(x)` dentro de `src/` de cada workspace (nunca em `apps/mobile/app/`).
+
+## Pré-requisitos
+
+- Node 24 (`.nvmrc`; mínimo 24.12.0).
+- Java 21 ou superior, necessário só para `npm run test:rules` (Emulator do Firestore).
+
+## Instalação
+
+```
+npm ci
+```
+
+Rode na raiz. O `.npmrc` define `ignore-scripts=true`: os scripts de instalação das dependências ficam desligados de propósito.
+
+## Comandos de qualidade
+
+```
+npx prettier --check .                 # ou: npm run format:check (npm run format aplica a formatação)
+npx eslint .                           # ou: npm run lint
+npx tsc --noEmit -p apps/mobile        # idem para packages/domain e functions; npm run typecheck roda os três e o de `tests`
+npx jest --ci                          # ou: npm test
+npm run test:rules
+```
+
+Em `apps/mobile`, também: `npx expo-doctor` e `npx expo export --platform android` (atalho: `npm run export:android -w @pocketoo/mobile`).
+
+### Iniciar o app
+
+```
+npm run start -w @pocketoo/mobile
+```
+
+Sobe o Metro com `expo start --dev-client`: o app abre em um dev build, não no Expo Go. Esta fatia ainda não tem build nativo (EAS), então por ora não há como abrir o app em um aparelho; use os comandos de qualidade acima para validar.
+
+### Testes das Rules
+
+`npm run test:rules` sobe o Emulator do Firestore com o projeto `demo-pocketoo` (porta 8080, não usa projeto real nem credenciais) e roda `tests/rules/firestore.rules.test.ts` contra `firestore.rules`. Exige Java 21+.
+
+### CI
+
+O workflow `.github/workflows/ci.yml` (job `validate`) roda em todo PR para `main`: `npm ci`, os comandos de qualidade acima, `npx expo-doctor` e `npx expo export --platform android`. Usa o Node do `.nvmrc` e Java 21 (Emulator do Firestore); as actions são fixadas por SHA. `.github/workflows` é protegido para agentes: mudança em workflow precisa de autorização explícita na Issue.
+
+Configuração do Firebase por ambiente, fronteiras de import no ESLint, composition root e a estrutura das features chegam nas Issues de continuação da #1.
+
+Design: `docs/design/pocketoo.md` (tokens e regras), `docs/design/telas/` (telas), `docs/design/mascotes/`, `docs/design/kit.css`.
+
+## Kit de agentes (template da software house)
+
+Daqui em diante, este README descreve o kit de agentes que acompanha o repositório.
 
 Template de todo projeto novo. `scripts/setup-project.sh <nome>` (no repositório ai-software-house) cria o repositório a partir daqui e configura labels, Dependabot e o ruleset `protect-main`.
 
