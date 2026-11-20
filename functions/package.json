@@ -9,11 +9,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@pocketoo/domain": "*",
     "firebase-admin": "14.5.1",
     "firebase-functions": "7.4.0"
   },
   "devDependencies": {
+    "@pocketoo/domain": "*",
     "@types/node": "~24.19.2"
   }
 }
