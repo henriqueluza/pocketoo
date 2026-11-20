@@ -7,6 +7,7 @@ __pycache__/
 # Dependências e saídas de build
 node_modules/
 .expo/
+.firebase/
 dist/
 coverage/
 functions/lib/
@@ -22,6 +23,10 @@ apps/mobile/ios/
 google-services.json
 GoogleService-Info.plist
 serviceAccount*.json
+*service-account*.json
+*-firebase-adminsdk-*.json
+pc-api-*.json
+play-store*.json
 *.jks
 *.keystore
 *.p8
