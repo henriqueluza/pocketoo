@@ -32,12 +32,20 @@ Rode na raiz. O `.npmrc` define `ignore-scripts=true`: os scripts de instalaçã
 ```
 npx prettier --check .                 # ou: npm run format:check (npm run format aplica a formatação)
 npx eslint .                           # ou: npm run lint
-npx tsc --noEmit -p apps/mobile        # idem para packages/domain e functions; npm run typecheck roda os três
+npx tsc --noEmit -p apps/mobile        # idem para packages/domain e functions; npm run typecheck roda os três e o de `tests`
 npx jest --ci                          # ou: npm test
 npm run test:rules
 ```
 
 Em `apps/mobile`, também: `npx expo-doctor` e `npx expo export --platform android` (atalho: `npm run export:android -w @pocketoo/mobile`).
+
+### Iniciar o app
+
+```
+npm run start -w @pocketoo/mobile
+```
+
+Sobe o Metro com `expo start --dev-client`: o app abre em um dev build, não no Expo Go. Esta fatia ainda não tem build nativo (EAS), então por ora não há como abrir o app em um aparelho; use os comandos de qualidade acima para validar.
 
 ### Testes das Rules
 
@@ -45,7 +53,7 @@ Em `apps/mobile`, também: `npx expo-doctor` e `npx expo export --platform andro
 
 ### CI
 
-O workflow `.github/workflows/ci.yml` (job `validate`) ainda não está no repositório: `.github/workflows` é protegido para agentes, então um humano precisa adicioná-lo (o conteúdo está na descrição do PR da Issue #1). Enquanto isso, rode os comandos acima localmente.
+O workflow `.github/workflows/ci.yml` (job `validate`) roda em todo PR para `main`: `npm ci`, os comandos de qualidade acima, `npx expo-doctor` e `npx expo export --platform android`. Usa o Node do `.nvmrc` e Java 21 (Emulator do Firestore); as actions são fixadas por SHA. `.github/workflows` é protegido para agentes: mudança em workflow precisa de autorização explícita na Issue.
 
 Configuração do Firebase por ambiente, fronteiras de import no ESLint, composition root e a estrutura das features chegam nas Issues de continuação da #1.
 
@@ -54,7 +62,6 @@ Design: `docs/design/pocketoo.md` (tokens e regras), `docs/design/telas/` (telas
 ## Kit de agentes (template da software house)
 
 Daqui em diante, este README descreve o kit de agentes que acompanha o repositório.
-
 
 Template de todo projeto novo. `scripts/setup-project.sh <nome>` (no repositório ai-software-house) cria o repositório a partir daqui e configura labels, Dependabot e o ruleset `protect-main`.
 

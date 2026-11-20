@@ -15,7 +15,16 @@ expo-env.d.ts
 apps/mobile/android/
 apps/mobile/ios/
 
-# Segredos e logs locais
+# Segredos, credenciais e logs locais
 .env
 .env.*
+!.env.example
+google-services.json
+GoogleService-Info.plist
+serviceAccount*.json
+*.jks
+*.keystore
+*.p8
+*.p12
+*.pem
 *-debug.log
