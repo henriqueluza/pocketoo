@@ -1,0 +1,8 @@
+{
+  "extends": ["expo/tsconfig.base", "../../tsconfig.base.json"],
+  "compilerOptions": {
+    "paths": { "@/*": ["./src/*"], "@pocketoo/domain": ["../../packages/domain/src/index.ts"] },
+    "types": ["jest"]
+  },
+  "include": ["app", "src", "global.d.ts", "app.config.ts"]
+}
