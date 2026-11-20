@@ -1,6 +1,8 @@
 > **RASCUNHO — aguarda revisão humana.** Texto preparado pela equipe técnica a partir do ADR-0001. Não passou por revisão jurídica e não deve ser publicado antes da Issue #77.
->
-> **Versão:** `0.1.0` · **Data da versão:** 19/11/2026 · **Vigência:** a definir na publicação
+
+- **Versão:** `0.1.0`
+- **Data da versão:** 2026-11-19
+- **Vigência:** a definir na publicação
 
 # Termos de Uso do Pocketoo
 
@@ -20,7 +22,7 @@ O Pocketoo ajuda você a organizar o dinheiro pessoal (CPF) e o da sua empresa (
 
 O app é uma ferramenta de organização. Ele **não** movimenta dinheiro, não se conecta ao seu banco, não faz pagamentos e não emite documentos fiscais.
 
-Nesta fase, o Pocketoo está em teste, disponível só para Android e para pessoas convidadas, sem planos pagos nem cobranças dentro do app. Funções podem ser incluídas, alteradas ou retiradas durante o teste.
+Nesta fase, o Pocketoo está em teste, disponível só para Android e para pessoas convidadas, sem planos pagos nem cobranças dentro do app. Funções podem ser incluídas, alteradas ou retiradas durante o teste; mudança que reduza seus direitos segue a seção 13.
 
 ## 4. Sugestões não são consultoria financeira
 
@@ -69,9 +71,11 @@ O app, a marca Pocketoo, o mascote Tuu, os demais mascotes e o design pertencem 
 
 ## 11. Responsabilidade
 
-Os cálculos do app (faturas, parcelas, limites, saldos) dependem do que você registra; confira os lançamentos e os dados dos cartões. Não respondemos por decisões tomadas com base nas sugestões do app, nem por perdas causadas por dados registrados de forma errada, por uso fora destes termos ou por acesso ao aparelho desbloqueado por terceiros.
+Os cálculos do app (faturas, parcelas, limites, saldos) dependem do que você registra; confira os lançamentos e os dados dos cartões.
 
-Nada nestes termos afasta direitos que a lei não permite afastar, inclusive os do Código de Defesa do Consumidor.
+Na medida permitida pela lei, não respondemos por decisões que você tomar com base nas sugestões do app, nem por perdas causadas por dados que você registrou de forma errada, por uso fora destes termos ou por acesso de terceiros ao seu aparelho desbloqueado.
+
+Respondemos pelos defeitos do próprio app, como um cálculo de fatura ou de parcela errado a partir de dados corretos, nos termos do Código de Defesa do Consumidor. Nada nestes termos afasta direitos que a lei não permite afastar.
 
 ## 12. Encerramento
 
@@ -81,7 +85,7 @@ Podemos suspender ou encerrar uma conta que descumpra estes termos, avisando voc
 
 ## 13. Mudanças nestes termos
 
-Toda mudança gera uma nova versão, com número e data no topo deste documento. Quando a mudança afetar seus direitos ou obrigações, avisaremos no app e pediremos um novo aceite antes de você continuar. Se não concordar, você pode exportar seus dados e excluir a conta.
+Toda mudança de conteúdo gera uma nova versão, com número e data no topo deste documento. Avisaremos cada nova versão no app e pediremos um novo aceite antes de você continuar. Se não concordar, você pode exportar seus dados e excluir a conta.
 
 ## 14. Lei aplicável e foro
 
