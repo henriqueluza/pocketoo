@@ -14,7 +14,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
-    "typecheck": "npm run typecheck --workspaces",
+    "typecheck": "npm run typecheck --workspaces && tsc --noEmit -p tests",
     "test": "jest --ci",
     "test:rules": "firebase emulators:exec --only firestore --project demo-pocketoo \"jest --ci --config tests/rules/jest.config.js\""
   },
