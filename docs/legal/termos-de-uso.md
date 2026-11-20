@@ -55,7 +55,7 @@ Você se compromete a não:
 
 ## 7. Seus dados
 
-Os dados que você registra são seus. Você nos autoriza a tratá-los só para prestar o serviço, como descrito na Política de Privacidade. Você pode exportar tudo ou excluir a conta a qualquer momento, em **Mais › Seus dados**.
+Os dados que você registra são seus. Nós os tratamos só para prestar o serviço, como descrito na Política de Privacidade. Você pode exportar tudo ou excluir a conta a qualquer momento, em **Mais › Seus dados**.
 
 ## 8. Uso sem internet
 

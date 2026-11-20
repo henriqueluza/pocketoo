@@ -1,6 +1,6 @@
 # Textos legais do Pocketoo
 
-Rascunhos da Política de Privacidade e dos Termos de Uso, escritos a partir da seção LGPD do ADR-0001 (`docs/architecture/pocketoo/ADR-0001-stack.md`) e da seção 4 da proposta de arquitetura (`docs/architecture/pocketoo/proposta-arquitetura.md`). A revisão humana, de preferência jurídica, e a publicação no Hosting ficam na Issue #77.
+Rascunhos da Política de Privacidade e dos Termos de Uso, escritos a partir da seção LGPD do ADR-0001 (`docs/architecture/pocketoo/ADR-0001-stack.md`) e das seções 1, 3 e 4 da proposta de arquitetura (`docs/architecture/pocketoo/proposta-arquitetura.md`). A revisão humana, de preferência jurídica, e a publicação no Hosting ficam na Issue #77.
 
 | Arquivo                      | Conteúdo                                                                                                         |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -9,11 +9,11 @@ Rascunhos da Política de Privacidade e dos Termos de Uso, escritos a partir da 
 
 ## Versão e consentimento
 
-- Cada arquivo traz no topo a marca de rascunho e, em linha própria, o campo **Versão** no formato `MAJOR.MINOR.PATCH` (semver), escrito como `` - **Versão:** `0.1.0` ``, seguido da data da versão em ISO (`AAAA-MM-DD`). Hoje os dois estão em `0.1.0`.
+- Cada arquivo traz no topo a marca de rascunho e, cada um em linha própria, os campos `` - **Versão:** `0.1.0` `` (semver, `MAJOR.MINOR.PATCH`) e `- **Data da versão:** AAAA-MM-DD` (ISO). Hoje os dois documentos estão em `0.1.0`.
 - A versão é independente por documento: a política pode mudar sem mudar os termos.
-- O consentimento do cadastro (Issue #14) grava a versão aceita de cada documento e a data. O app guarda a versão atual de cada documento numa constante, atualizada no mesmo PR que muda o texto, e compara por igualdade de texto: versão diferente da aceita pede novo aceite na próxima abertura.
+- O consentimento do cadastro (Issue #14) grava a versão aceita de cada documento e a data. O app guarda a versão atual de cada documento numa constante, atualizada no mesmo PR que muda o texto, e compara a string da versão por igualdade: versão diferente da aceita pede novo aceite na próxima abertura.
 - Rascunhos usam `0.x.y`. A primeira versão publicada, depois da Issue #77, é `1.0.0`.
-- Toda mudança de conteúdo sobe a versão e, por isso, pede novo aceite (os dois textos dizem isso na última seção). Correção que não muda o sentido, como erro de digitação, mantém a versão.
+- Toda mudança de conteúdo sobe a versão e, por isso, pede novo aceite (os dois textos dizem isso na última seção). Correção que não muda o sentido, como erro de digitação, não é mudança de conteúdo e mantém a versão.
 - Ao publicar, retire o bloco de rascunho e preencha a vigência.
 
 ## Pendências para a revisão humana (Issue #77)
@@ -34,19 +34,24 @@ Pontos a conferir, já escritos no texto com a opção mais conservadora:
 9. **Bases legais.** Execução de contrato para os dados do serviço, consentimento para a IA, exercício regular de direitos para os registros de aceite e legítimo interesse para os dados técnicos. Confirmar, e avaliar se o legítimo interesse precisa de teste de balanceamento documentado.
 10. **Incidentes.** O texto remete aos prazos da regulamentação da ANPD para comunicar incidentes, sem citar número de dias.
 11. **Página publicada.** A página no Firebase Hosting registra o IP de quem a abre; avaliar se a política precisa citar isso ao publicar.
-12. **Fase 2.** Antes da publicação pública: iOS, planos pagos (Termos precisam de seção de pagamento, renovação e reembolso), limite a mudanças unilaterais de funções, vários usuários no mesmo espaço (regra de exclusão de espaços compartilhados) e logos de terceiros na tela de assinaturas.
+12. **Dado sensível em texto livre.** O app não pede dados sensíveis, mas descrições e nomes de categorias podem revelá-los (saúde, religião) e vão à IA quando ela está ligada. O texto avisa a pessoa; avaliar se isso basta.
+13. **Suspensão de conta.** Os Termos (seção 12) dizem "avisando você sempre que possível"; avaliar se o CDC pede regra mais firme.
+14. **Fase 2.** Antes da publicação pública: iOS, planos pagos (Termos precisam de seção de pagamento, renovação e reembolso), limite a mudanças unilaterais de funções, vários usuários no mesmo espaço (regra de exclusão de espaços compartilhados) e logos de terceiros na tela de assinaturas.
 
 ## Promessas do texto que dependem de outras Issues
 
 Cada promessa abaixo vira critério de aceite da Issue que a implementa. Os itens marcados com "(da #4)" foram acrescentados ao corpo da Issue por este PR.
 
-| Promessa                                                                                        | Issue                                                                |
-| ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| Áudio transcrito no aparelho: reconhecimento local forçado; sem suporte, o microfone some       | #54 (da #4)                                                          |
-| Exportação com todos os dados da conta, em bucket privado no Brasil, apagada em 24 h            | #65 (da #4 para a lista completa e a região)                         |
-| Exclusão de tudo, com registro só de data e código anônimo                                      | #66                                                                  |
-| Cópias de segurança até 30 dias, sem soft delete além disso; restauração reaplica exclusões     | #69 (da #4)                                                          |
-| Relatórios de erro sem valores, descrições, nome ou e-mail; sem analytics nem ID de publicidade | #50 (da #4 para analytics e ID de publicidade)                       |
-| Nenhum conteúdo do usuário em log das Functions                                                 | #25 (IA); demais Functions seguem a regra da proposta de arquitetura |
-| IA opcional e desmarcada; só a versão e a data do aceite gravadas                               | #14                                                                  |
-| O que vai à IA: texto e nomes de categorias; totais e metas; tipo de regra e números            | #26, #59, #62                                                        |
+| Promessa                                                                                                                               | Issue                                                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Áudio transcrito no aparelho: reconhecimento local forçado; sem suporte, o microfone some                                              | #54 (da #4)                                                                                                                                         |
+| Exportação com todos os dados da conta, em bucket privado no Brasil, apagada em 24 h                                                   | #65 (da #4 para a lista completa e a região)                                                                                                        |
+| Exclusão de tudo na nuvem (inclusive exportações), com registro só de data e código anônimo                                            | #66 (já coberto)                                                                                                                                    |
+| Exclusão apaga o cache local do aparelho                                                                                               | #67 (já coberto)                                                                                                                                    |
+| Cópias de segurança até 30 dias, sem soft delete além disso; restauração apaga de novo os dados de contas que não existem mais no Auth | #69 (da #4)                                                                                                                                         |
+| Relatórios de erro sem valores, descrições, nome ou e-mail; sem analytics nem ID de publicidade                                        | #50 (da #4 para analytics e ID de publicidade)                                                                                                      |
+| Nenhum conteúdo do usuário em log das Functions                                                                                        | #25 tem teste para a IA; para as demais, vale a ameaça 4 do ADR-0001 ("sem dados financeiros em logs") — conferir na revisão de #59, #62, #65 e #66 |
+| IA opcional e desmarcada; gravação da versão, da data e da escolha de IA                                                               | #14 (já coberto)                                                                                                                                    |
+| O que vai à IA: texto e nomes de categorias; totais e metas; tipo de regra e números                                                   | #26, #59, #62 (já coberto)                                                                                                                          |
+| Planilha `.xlsx` lida só no aparelho                                                                                                   | #55 (já coberto pelo ADR; conferir na implementação)                                                                                                |
+| Notificações sem valores, a menos que a pessoa escolha mostrar                                                                         | #45 e #46 (ameaça 4 do ADR; conferir na implementação)                                                                                              |

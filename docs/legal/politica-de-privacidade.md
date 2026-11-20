@@ -29,7 +29,7 @@ Ao criar a conta, você declara que leu esta política. O uso de inteligência a
 
 ## 3. Dados que usamos, para quê e com qual base legal
 
-As bases legais são as do art. 7º da LGPD. Nenhum dos dados abaixo é dado pessoal sensível no sentido do art. 5º, II, da LGPD.
+As bases legais são as do art. 7º da LGPD. O app não pede dados pessoais sensíveis (art. 5º, II, da LGPD), como dados de saúde ou religião. Mas o texto livre que você escreve, nas descrições e nos nomes de categorias, pode revelá-los (por exemplo, "consulta médica"); evite esse tipo de detalhe quando não for necessário.
 
 | Dado                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Para quê                                                                                                                                  | Base legal                                                                                                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,7 +53,7 @@ As bases legais são as do art. 7º da LGPD. Nenhum dos dados abaixo é dado pes
 
 ## 5. Inteligência artificial
 
-A IA é **opcional** e vem desligada até você marcar a opção no cadastro ou em **Mais › Seus dados › Usar IA nas sugestões e resumos**. Com ela desligada, nada é enviado à IA: as categorias são sugeridas por regras que rodam no aparelho e os resumos e as estratégias usam textos prontos.
+A IA é **opcional** e vem desligada até você marcar a opção no cadastro ou em **Mais › Seus dados › Usar IA nas sugestões e resumos**. Com ela desligada, nada é enviado à IA: as categorias são sugeridas por regras que rodam no aparelho e não há textos escritos por IA.
 
 Quando ligada, o app usa o modelo Claude, da Anthropic, PBC (Estados Unidos), chamado só pelos nossos servidores. O que é enviado:
 
@@ -61,7 +61,7 @@ Quando ligada, o app usa o modelo Claude, da Anthropic, PBC (Estados Unidos), ch
 - **Para escrever os resumos da semana e do mês:** os totais por categoria e as suas metas e limites do período, sem as descrições dos lançamentos.
 - **Para escrever o texto das estratégias:** o tipo de situação que as regras do app identificaram e os números calculados por elas, sem as descrições dos lançamentos.
 
-**Nunca são enviados** seu nome, e-mail, identificador da conta, número de CPF ou CNPJ, nem outros lançamentos além do que está sendo analisado. O texto do lançamento vai como você escreveu: se ele tiver o nome de alguém ou outro dado pessoal, esse dado vai junto. Por isso, prefira descrições curtas e sem dados de outras pessoas.
+**O app nunca acrescenta** ao que envia seu nome, e-mail, identificador da conta, número de CPF ou CNPJ, nem outros lançamentos além do que está sendo analisado. O texto do lançamento e os nomes das categorias vão como você escreveu: se tiverem o nome de alguém ou outro dado pessoal, esse dado vai junto. Por isso, prefira descrições curtas e sem dados de outras pessoas.
 
 Pelos termos comerciais da Anthropic [CONFIRMAR NO DPA ANTES DE PUBLICAR], os dados enviados pela API **não são usados para treinar modelos** e ficam guardados por [PRAZO DE RETENÇÃO DA API DA ANTHROPIC] para segurança e prevenção de abuso, sendo apagados depois.
 
@@ -95,16 +95,16 @@ Essas transferências se apoiam em [MECANISMO DO ART. 33 DA LGPD — por exemplo
 
 ## 8. Por quanto tempo guardamos
 
-| Dado                                                                                           | Prazo                                                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Conta, dados financeiros, quiz, preferências, registros de aceite, resumos e estratégias de IA | Enquanto a conta existir. Ao excluir a conta, são apagados da nuvem e do aparelho.                                                                                                                       |
-| Cópias de segurança do banco de dados                                                          | Até 30 dias. Depois disso são apagadas automaticamente, inclusive os dados de contas já excluídas. Se uma cópia precisar ser restaurada, as exclusões de conta feitas depois dela são aplicadas de novo. |
-| Arquivo de exportação dos seus dados                                                           | Até 24 horas depois de gerado.                                                                                                                                                                           |
-| Relatórios de erro                                                                             | Até 90 dias.                                                                                                                                                                                             |
-| Registros de acesso aos servidores                                                             | Até 30 dias.                                                                                                                                                                                             |
-| Texto enviado à IA                                                                             | Pelo prazo da Anthropic informado na seção 5.                                                                                                                                                            |
-| Dados guardados no aparelho para funcionar sem internet                                        | Até você excluir a conta ou desinstalar o app.                                                                                                                                                           |
-| Registro de exclusão de conta                                                                  | Guardamos só a data e um código sem relação com você, que não permite identificar você.                                                                                                                  |
+| Dado                                                                                                                                             | Prazo                                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conta (inclusive foto do perfil e token de notificação), dados financeiros, quiz, preferências, registros de aceite, resumos e estratégias de IA | Enquanto a conta existir. Ao excluir a conta, são apagados da nuvem e do aparelho.                                                                                                                              |
+| Cópias de segurança do banco de dados                                                                                                            | Até 30 dias. Depois disso são apagadas automaticamente, inclusive os dados de contas já excluídas. Se uma cópia precisar ser restaurada, os dados de contas que não existem mais no login são apagados de novo. |
+| Arquivo de exportação dos seus dados                                                                                                             | Até 24 horas depois de gerado.                                                                                                                                                                                  |
+| Relatórios de erro                                                                                                                               | Até 90 dias.                                                                                                                                                                                                    |
+| Registros de acesso aos servidores                                                                                                               | Até 30 dias.                                                                                                                                                                                                    |
+| Texto enviado à IA                                                                                                                               | Pelo prazo da Anthropic informado na seção 5.                                                                                                                                                                   |
+| Dados guardados no aparelho para funcionar sem internet                                                                                          | Até você excluir a conta ou desinstalar o app.                                                                                                                                                                  |
+| Registro de exclusão de conta                                                                                                                    | Guardamos só a data e um código sem relação com você, que não permite identificar você.                                                                                                                         |
 
 Podemos guardar algum dado por mais tempo só quando a lei exigir ou para defender direitos em processo judicial ou administrativo (art. 16 da LGPD).
 
@@ -115,7 +115,7 @@ A LGPD (art. 18) garante a você: confirmar se tratamos seus dados, acessá-los,
 Pelo próprio app:
 
 - **Exportar seus dados:** em **Mais › Seus dados › Exportar**, você recebe um arquivo em JSON e CSV com todos os dados da sua conta: espaços, contas e cartões, lançamentos, faturas, categorias, eventos, assinaturas e gastos fixos, empréstimos e dívidas, limites, metas, vínculos entre Pessoal e Empresa, respostas do quiz, resumos, estratégias e registros de aceite. O link de download vale por pouco tempo e é possível gerar uma exportação por hora.
-- **Excluir a conta e todos os dados:** em **Mais › Seus dados › Excluir minha conta**. A exclusão apaga para sempre seus espaços, lançamentos, cartões, limites, metas, resumos, estratégias e a conta de login, na nuvem e no aparelho, e não pode ser desfeita. Ficam de fora só o que expira sozinho, pelos prazos da seção 8: as cópias de segurança (até 30 dias), os relatórios de erro e os registros de acesso, que não têm dados financeiros, e o texto já enviado à IA.
+- **Excluir a conta e todos os dados:** em **Mais › Seus dados › Excluir minha conta**. A exclusão apaga para sempre seus espaços, lançamentos, cartões, limites, metas, resumos, estratégias, arquivos de exportação e a conta de login, na nuvem e no aparelho, e não pode ser desfeita. Ficam de fora só o que expira sozinho, pelos prazos da seção 8: as cópias de segurança (até 30 dias), os relatórios de erro e os registros de acesso, que não têm dados financeiros, e o texto já enviado à IA.
 - **Corrigir:** edite os dados diretamente no app.
 - **Revogar o consentimento da IA:** desligue **Usar IA nas sugestões e resumos**. A revogação vale dali em diante e não apaga os resumos e as estratégias já gerados. Para apagá-los, escreva para [E-MAIL DE PRIVACIDADE] ou exclua a conta.
 
@@ -126,7 +126,7 @@ Para os demais direitos, ou se algo não funcionar, escreva para [E-MAIL DE PRIV
 - Conexões cifradas (TLS) e dados cifrados em repouso nos servidores do Google.
 - Cada conta acessa só os próprios espaços, por regras de acesso testadas a cada mudança.
 - Bloqueio do app por biometria ou PIN do aparelho; notificações sem valores, a menos que você escolha mostrá-los.
-- O app não guarda chaves secretas. Nossos servidores aceitam chamadas só de instalações verificadas do app original, além de checar as regras de acesso de cada conta.
+- O app não guarda chaves secretas. Nossos servidores exigem a verificação do app original (App Check) nas chamadas, além das regras de acesso de cada conta.
 - Relatórios de erro e registros de acesso sem valores, descrições de lançamento, nome ou e-mail.
 
 Se acontecer um incidente de segurança que possa trazer risco ou dano relevante a você, avisaremos você e a ANPD nos prazos da regulamentação da ANPD (art. 48 da LGPD).
